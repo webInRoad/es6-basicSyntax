@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>面向对象</title>
+	<script type="text/javascript" src="react.js"></script>
+	<script type="text/javascript" src="react-dom.js"></script>
+	<script type="text/javascript" src="browser.js"></script>
+	<script type="text/babel">
+		class Test extends React.Component{
+			constructor(...args){
+				super(...args)
+			}
+			render(){
+				return <span>23</span>
+			}
+		}
+		window.onload = function(){
+			console.info(323)
+			let oDiv = document.getElementById("oDiv");
+			ReactDOM.render(
+				<Test></Test>,
+				oDiv
+			)
+		}
+	</script>
+</head>
+<body>
+	<div id="oDiv"></div>
+</body>
+</html>

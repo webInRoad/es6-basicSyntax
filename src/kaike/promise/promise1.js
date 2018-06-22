@@ -1,0 +1,19 @@
+{
+	let p = new Promise(function(resolve,reject){
+		$.ajax({
+			url:'/kaike/promise/data/arr.txt',
+			dataType:'json',
+			success(data){
+				resolve(data)
+			},
+			error(err){
+				reject(err)
+			}
+		})
+	})
+	p.then(function(arr){
+		console.info("成功了"+arr)
+	},function(err){
+		console.info("失败了")
+	})
+}
