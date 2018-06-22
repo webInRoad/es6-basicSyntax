@@ -10,18 +10,22 @@ Reflect
 					 Reflect.deleteProperty(obj,name)
 		4.方便
  */
+//读取
 let obj = {
-	names : "zjh",
+	names : "张三",
 	str:"加油"
 }
-console.info(obj.names)
-console.info(Reflect.get(obj,'names'));
+console.info(obj.names);//张三
+console.info(Reflect.get(obj,'names'));//张三
 
-obj.names = 'cyz'
-console.info(obj.names)
-Reflect.set(obj,"names","zqiaoyue")
-console.info(Reflect.get(obj,"names"))
+//设置
+obj.names = '李四'
+console.info(obj.names);//李四
+Reflect.set(obj,"names","王五");
+console.info(Reflect.get(obj,"names"));//王五
+
+//删除
 delete obj.str
-console.info(obj)
+console.info(obj);//{names: "王五"}
 Reflect.deleteProperty(obj,"names")
-console.info(obj)
+console.info(obj);//{}
